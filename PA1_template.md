@@ -97,7 +97,7 @@ TotalSteps
 hist(TotalSteps$steps, main = "Total steps by day", xlab = "day")
 ```
 
-![](PA1_template_files/figure-html/histogram-1.png)<!-- -->
+![](histogram-1.png)<!-- -->
 
 ```r
 dev.copy(png, file="plot1.png", height=480, width=480)
@@ -228,7 +228,8 @@ cat("Total ",count, "NA values were filled.\n\r")
 
 ```
 ## Total  2304 NA values were filled.
-## 
+## 
+
 ```
 
 4. Make a histogram of the total number of steps taken each day and calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
