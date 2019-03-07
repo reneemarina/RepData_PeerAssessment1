@@ -1,7 +1,8 @@
 ---
-# title: "Assignment1"
-## Author: "Renee Marina"
-## output: html_document
+title: "Data Science Course 5 Assignment 1"
+output: 
+    html_document:
+        keep_md: yes
 ---
 
 ```{r setoptions, include = FALSE}
