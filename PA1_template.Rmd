@@ -29,13 +29,16 @@ TotalSteps
 
 ```{r histogram}
 hist(TotalSteps$steps, main = "Total steps by day", xlab = "day")
+dev.copy(png, file="plot1.png", height=480, width=480)
+dev.off()
+
 ```
 
 3.Calculate and report the mean and median total number of steps taken per day 
 
 ```{r meanmedian}
 meanSteps <- mean(TotalSteps$steps)
-medianSteps <-(TotalSteps$steps)
+medianSteps <-median(TotalSteps$steps)
 meanSteps
 medianSteps
 ```
@@ -51,6 +54,8 @@ The median total number of steps taken per day is `r medianSteps` steps.
 ```{r timeseriesplot}
 StepsInterval<-aggregate(steps~interval,data=activity,mean,na.rm=TRUE)
 plot(steps~interval,data=StepsInterval,type="l")
+dev.copy(png, file="plot2.png", height=480, width=480)
+dev.off()
 ```
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps? 
@@ -103,6 +108,8 @@ TotalSteps2<-aggregate(steps~date,data=ActivityFilled,sum)
 hist(TotalSteps2$steps, main = "Total steps by day", xlab = "day")
 meanSteps2 <- mean(TotalSteps2$steps)
 medianSteps2 <- median(TotalSteps2$steps)
+dev.copy(png, file="plot3.png", height=480, width=480)
+dev.off()
 ```
 
 The mean total number of steps taken per day is 
@@ -130,6 +137,8 @@ ActivityFilled$day=factor(ActivityFilled$day,levels=c("weekday","weekend"))
 StepsInterval2=aggregate(steps~interval+day,ActivityFilled,mean)
 library(lattice)
 xyplot(steps~interval|factor(day),data=StepsInterval2,aspect=1/2,type="l", xlab = "Interval",ylab = "Number of steps")
+dev.copy(png, file="plot4.png", height=480, width=480)
+dev.off()
 ```
 
 
