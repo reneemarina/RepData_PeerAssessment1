@@ -152,7 +152,7 @@ StepsInterval<-aggregate(steps~interval,data=activity,mean,na.rm=TRUE)
 plot(steps~interval,data=StepsInterval,type="l")
 ```
 
-![](PA1_template_files/figure-html/timeseriesplot-1.png)<!-- -->
+![](timeseriesplot-1.png)<!-- -->
 
 ```r
 dev.copy(png, file="plot2.png", height=480, width=480)
@@ -240,7 +240,7 @@ TotalSteps2<-aggregate(steps~date,data=ActivityFilled,sum)
 hist(TotalSteps2$steps, main = "Total steps by day", xlab = "day")
 ```
 
-![](PA1_template_files/figure-html/histogram2-1.png)<!-- -->
+![](histogram2-1.png)<!-- -->
 
 ```r
 meanSteps2 <- mean(TotalSteps2$steps)
@@ -290,7 +290,7 @@ library(lattice)
 xyplot(steps~interval|factor(day),data=StepsInterval2,aspect=1/2,type="l", xlab = "Interval",ylab = "Number of steps")
 ```
 
-![](PA1_template_files/figure-html/panelplot-1.png)<!-- -->
+![](panelplot-1.png)<!-- -->
 
 ```r
 dev.copy(png, file="plot4.png", height=480, width=480)
